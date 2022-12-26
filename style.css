@@ -44,15 +44,20 @@ body {
     align-items: center;
 }
 
-.sliderinput {
-    display: flex;
-    gap: 5px;
+.sizeoptions::after {
+    content: "\2139";
 }
 
-.gridspace {
+/* .sizeoptions::after:hover {
+    content: "Grid density increases as the slider goes from left to right";
+    width: 40px;
+} */
+
+.grid-space {
     border: 1px solid black;
     height: 400px;
     width: 400px;
+    display: grid;
 }
 
 .footer {
