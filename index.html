@@ -20,26 +20,21 @@
             <button class="eraser" id="eraser">Erase mode</button>
             <button class="clear" id="clear">Clear</button>
             <div class="sizeoptions">
-                <div class="grids">
-                    <input type="radio" name="grid" id="8x8">
-                    <label for="8x8">8 X 8</label>
-                </div>
-                <div class="grids">
-                    <input type="radio" name="grid" id="16x16">
-                    <label for="16x16">16 X 16</label>
-                </div>
-                <div class="grids">
-                    <input type="radio" name="grid" id="32x32">
-                    <label for="32x32">32 X 32</label>
-                </div>
-                <div class="grids">
-                    <input type="radio" name="grid" id="64x64">
-                    <label for="64x64">64 X 64</label>
+                <label for="sizeslider">Grid Density</label>
+                <div class="size-value" id="sizevalue">16 X 16</div>
+                <div class="sliderinput">
+                    <input type="range" id="sizeslider" min="2" max="64">
+                    <div id="sliderinfo">
+                        <div class="info">&#8505</div>
+                        <!-- <p>Grid density increases from left to right movement of the slider</p> -->
+                    </div>
                 </div>
             </div>
         </div>
         <div class="gridspace">
+            <div class="gridcontainer">
 
+            </div>
         </div>
     </div>
     <div class="footer">
