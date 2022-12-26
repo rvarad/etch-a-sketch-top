@@ -12,6 +12,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .title {
@@ -21,11 +22,14 @@ body {
 .main {
     display: flex;
     flex-direction: row;
+    gap: 30px;
 }
 
 .settings {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -34,13 +38,21 @@ body {
 }
 
 .sizeoptions {
-    display: flex;
-    gap: 30px;
-}
-
-.grids {
+    width: 150px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.sliderinput {
+    display: flex;
+    gap: 5px;
+}
+
+.gridspace {
+    border: 1px solid black;
+    height: 400px;
+    width: 400px;
 }
 
 .footer {
