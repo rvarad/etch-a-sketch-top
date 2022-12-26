@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
-<body>
+<body onload="constructGrid(16)">
     <div class="title">
         <h1>Etch-a-sketch</h1>
     </div>
@@ -22,19 +22,10 @@
             <div class="sizeoptions">
                 <label for="sizeslider">Grid Density</label>
                 <div class="size-value" id="sizevalue">16 X 16</div>
-                <div class="sliderinput">
-                    <input type="range" id="sizeslider" min="2" max="64">
-                    <div id="sliderinfo">
-                        <div class="info">&#8505</div>
-                        <!-- <p>Grid density increases from left to right movement of the slider</p> -->
-                    </div>
-                </div>
+                <input type="range" id="sliderInput" value="16" min="2" max="64">
             </div>
         </div>
-        <div class="gridspace">
-            <div class="gridcontainer">
-
-            </div>
+        <div class="grid-space">
         </div>
     </div>
     <div class="footer">
