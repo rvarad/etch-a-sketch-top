@@ -16,17 +16,19 @@ let constructGrid = function (x) {
         let gridelement = document.createElement('div');
         gridcontainer.appendChild(gridelement);
         gridelement.classList.add('grid-element');
+        gridelement.addEventListener('mouseover', () => {
+            gridelement.style.backgroundColor = 'black';
+        });
+        gridelement.addEventListener('mouseout', () => {
+            gridelement.style.backgroundColor = 'black';
+        });
     };
-}
-
-let div = document.querySelectorAll('div');
+};
 
 sizeslider.addEventListener('click', () => {
     gridsizevalue.textContent = showGridDensity();
     if (gridcontainer.childElementCount > 0) {
-        while (gridcontainer.childElementCount) {
-            gridcontainer.removeChild(gridcontainer.firstChild);
-        }
+        gridcontainer.innerHTML = '';
     }
     constructGrid(sizeslider.value);
 })
