@@ -79,11 +79,13 @@ let constructGrid = function (x) {
         let gridelement = document.createElement('div');
         gridcontainer.appendChild(gridelement);
         gridelement.classList.add('grid-element');
-        gridelement.addEventListener('mouseover', () => {
-            gridelement.style.backgroundColor = changeColor();
-        });
-        gridelement.addEventListener('mouseout', () => {
-            gridelement.style.backgroundColor = changeColor();
-        });
+        if (mode) {
+            gridelement.addEventListener('mouseover', () => {
+                gridelement.style.backgroundColor = changeColor();
+            });
+            gridelement.addEventListener('mouseout', () => {
+                gridelement.style.backgroundColor = changeColor();
+            });
+        }
     };
 };
