@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-sketch</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="./script.js" defer></script>
 </head>
 <body onload="constructGrid(16)">
@@ -20,7 +21,7 @@
             <button class="eraser" id="eraser">Erase</button>
             <button class="clear" id="clear">Clear</button>
             <div class="sizeoptions">
-                <label for="sizeslider">Grid Density</label>
+                <label for="sizeslider">Grid Density <sup><i class="fa fa-info-circle"></i></sup></label>
                 <div class="size-value" id="sizevalue">16 X 16</div>
                 <input type="range" id="sliderInput" value="16" min="1" max="100">
             </div>
@@ -30,7 +31,7 @@
     </div>
     <div class="footer">
         <span class="credits">Brought to you by : 
-            <a href="https://github.com/rvarad" target="_blank">rvarad</a> | <a href="" target="_blank">Source</a>
+            <a href="https://github.com/rvarad" target="_blank">rvarad</a> | <a href="https://github.com/rvarad/etch-a-sketch-top" target="_blank">Source</a>
         </span>
     </div>
 </body>

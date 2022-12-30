@@ -18,14 +18,23 @@ colorPicker.addEventListener('input', () => {
 
 classicMode.addEventListener('click', () => {
     mode = 'Classic';
+    classicMode.classList.add('selected');
+    funkyMode.classList.remove('selected');
+    eraseMode.classList.remove('selected');
 })
 
 funkyMode.addEventListener('click', () => {
     mode = 'Funky';
+    classicMode.classList.remove('selected');
+    funkyMode.classList.add('selected');
+    eraseMode.classList.remove('selected');
 });
 
 eraseMode.addEventListener('click', () => {
-    mode = 'Eraser'
+    mode = 'Eraser';
+    classicMode.classList.remove('selected');
+    funkyMode.classList.remove('selected');
+    eraseMode.classList.add('selected');
 });
 
 clearbtn.addEventListener('click', () => {
