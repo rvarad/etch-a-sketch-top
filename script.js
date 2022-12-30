@@ -48,11 +48,7 @@ sizeslider.addEventListener('click', () => {
         gridcontainer.innerHTML = '';
     }
     constructGrid(sizeslider.value);
-})
-// this is for the click throuugh effect : addEventListener('click', () => {
-// mouseover = true;
-// mouseout = false;
-// })
+});
 
 randomnColor = function () {
     let letters = '0123456789ABCDEF';
@@ -69,7 +65,7 @@ let changeColor = function () {
         return (usingColor)
     } else if (mode === 'Funky') {
         usingColor = randomnColor();
-        return (randomnColor())
+        return (usingColor)
     } else if (mode === 'Eraser') {
         usingColor = '#FFFFFF';
         return (usingColor)
@@ -88,13 +84,11 @@ let constructGrid = function (x) {
         let gridelement = document.createElement('div');
         gridcontainer.appendChild(gridelement);
         gridelement.classList.add('grid-element');
-        if (mode) {
-            gridelement.addEventListener('mouseover', () => {
-                gridelement.style.backgroundColor = changeColor();
-            });
-            gridelement.addEventListener('mouseout', () => {
-                gridelement.style.backgroundColor = changeColor();
-            });
-        }
+        gridelement.addEventListener('mouseover', () => {
+            gridelement.style.backgroundColor = changeColor();
+        });
+        gridelement.addEventListener('mouseout', () => {
+            gridelement.style.backgroundColor = changeColor();
+        });
     };
 };
